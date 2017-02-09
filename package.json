@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.php",
   "scripts": {
-    "watch": "./node_modules/.bin/webpack -w"
+    "watch": "./node_modules/.bin/webpack -w",
+    "build": "./node_modules/.bin/webpack -p"
   },
   "author": "Tatenda Chawanzwa",
   "license": "ISC",

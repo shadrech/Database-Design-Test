@@ -25,4 +25,18 @@ var config = {
 	}
 };
 
+/* If bundling for production, optimize output, no sourcemaps */
+if (process.env.NODE_ENV === "production") {
+  delete config.devtool;
+
+  config.plugins = [
+    new webpack.optimize.UglifyJsPlugin({
+      comments: false,
+      compress: {
+          warnings: true
+      }
+    })
+  ];
+};
+
 module.exports = config;
