@@ -1,4 +1,5 @@
 <?php
+
 require "vendor/autoload.php";
 
 fopen(__DIR__ . "/database/database.sqlite", "w"); //create sqlite file
@@ -10,3 +11,6 @@ require __DIR__ . "/bootstrap/database.php";
 require __DIR__ . "/database/migrations/create_school_table.php";
 require __DIR__ . "/database/migrations/create_member_table.php";
 require __DIR__ . "/database/migrations/create_enrolments_table.php";
+
+//initial seeding
+require __DIR__ . "/database/seed.php";

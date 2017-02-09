@@ -2,17 +2,17 @@
 
 use Illuminate\Database\Capsule\Manager as Capsule;
 
+Capsule::connection()->statement('PRAGMA foreign_keys = ON');
+
 Capsule::schema()->create('enrolments', function($table){
 	$table->integer('member_id')->unsigned();
 	$table->integer('school_id')->unsigned();
 
 	$table->foreign('member_id')
-		->references('id')
-		->on('members')
+		->references('id')->on('members')
 		->onDelete('cascade');
 
 	$table->foreign("school_id")
-		->references("id")
-		->on('schools')
+		->references("id")->on('schools')
 		->onDelete('cascade');
 });

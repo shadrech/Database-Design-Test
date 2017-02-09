@@ -1,0 +1,71 @@
+.content {
+	text-align: center;
+	padding-top: 10px;
+	font-family: "Times New Roman", Georgia;
+
+	h1 {
+		color: $dark-blue;
+		text-transform: uppercase;
+		margin-bottom: 30px;
+	}
+	.content-area {
+		text-align: left;
+		background: $light-blue;
+	    padding: 1px 10px 10px 10px;
+	    margin-bottom: 10px;
+
+		h3, h4 {
+			color: $dark-blue;
+			margin-bottom: 0;
+		}
+		h4 {
+			margin-top: 0;
+		}
+		li, p {
+			color: $blue;
+		}
+		p {
+			margin: 10px 0 0 0;
+			padding: 0;
+		}
+
+		form {
+			input {
+				display: block;
+			    margin: 10px 0;
+			    height: 45px;
+			    width: 90%;
+			    margin-left: 5%;
+			    font-size: 1.5em;
+			    border: none;
+			    padding-left: 10px;
+			}
+			select {
+			    margin-left: 50%;
+			    transform: translateX(-50%);
+			    margin-bottom: 20px;
+			}
+			button {
+			    margin-left: 50%;
+			    transform: translateX(-50%);
+			    font-size: 1.5em;
+			}
+			button.delete {
+				display: inline;
+			    position: absolute;
+			    right: 10px;
+			    top: 10px;
+			}
+		}
+
+		.alert.alert-danger {
+		    margin-bottom: 0 !important;
+		    margin-top: 20px !important;
+		    width: 80%;
+		    margin-left: 10%;
+		    li {
+		    	color: #a94442 !important;
+		    }
+		}
+	}
+}

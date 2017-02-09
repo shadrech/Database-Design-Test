@@ -1,0 +1,22 @@
+.sidebar {
+	height: 100vh;
+	background: $light-blue;
+	padding-top: 50px;
+
+	a {
+		font-family: Garamond, "Times New Roman";
+	    position: relative;
+	    display: block;
+	    width: 100%;
+	    font-size: 2em;
+	    text-align: center;
+	    color: white;
+	    background: $blue;
+	    margin: 5px 0;
+	    padding: 10px 0;
+
+	    &:hover {
+	    	background: #98a8b1;
+	    }
+	}
+}

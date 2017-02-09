@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Model;
 class School extends Model
 {
 	public $timestamps = false;
+	
 	protected $fillable = [
 		'name'
 	];
@@ -20,6 +21,6 @@ class School extends Model
 	 */
 	public function enrolments()
 	{
-		$this->hasMany(Enrolment::class, "school_id");
+		return $this->hasMany(Enrolment::class, "school_id");
 	}
 }

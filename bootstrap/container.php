@@ -13,6 +13,6 @@ of App/Controllers\Controller via its constructor
 $container['view'] = function($container) {
 	return new Blade(
 		$container['settings']['renderer']['blade_template_path'],
-        $container['settings']['renderer']['blade_cache_path']
+		$container['settings']['renderer']['blade_cache_path']
 	);
 };

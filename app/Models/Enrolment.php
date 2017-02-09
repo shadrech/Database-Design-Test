@@ -12,6 +12,11 @@ use Illuminate\Database\Eloquent\Model;
 class Enrolment extends Model
 {
 	public $timestamps = false;
+
+	protected $fillable = [
+		'member_id',
+		'school_id'
+	];
 	
 	/**
 	 * Returns associated School
@@ -19,7 +24,7 @@ class Enrolment extends Model
 	 */
 	public function school()
 	{
-		return $this->hasOne(School::class);
+		return $this->hasOne(School::class, 'id', 'school_id');
 	}
 
 	/**
@@ -28,6 +33,6 @@ class Enrolment extends Model
 	 */
 	public function member()
 	{
-		return $this->hasOne(Member::class);
+		return $this->hasOne(Member::class, 'id', 'member_id');
 	}
 }
