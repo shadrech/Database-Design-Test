@@ -30,7 +30,7 @@ $ npm run build
 ```
 
 Now everythings set. Boot up a php server specifying the public folder to be the document root for the web server
-``bash
+```bash
 $ php -S localhost:8000 -t public
 ```
 
