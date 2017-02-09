@@ -9,7 +9,7 @@
 				<form action="/members/create" method="POST">
 					<input type="text" name="name" placeholder="Name">
 					<input type="email" name="email" placeholder="Email">
-					<select name="school">
+					<select name="schools[]" multiple>
 						@foreach($schools as $s)
 							<option value="{{ $s->id }}">{{ $s->name }}</option>
 						@endforeach

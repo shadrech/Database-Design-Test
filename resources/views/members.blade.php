@@ -10,7 +10,7 @@
 					<form action="/members" method="POST">
 						<input type="hidden" name="id" value="{{ $m->id }}">
 						<input type="hidden" name="_METHOD" value="DELETE">
-						<button role="submit" class="delete">X</button>
+						<button role="submit" class="delete" disabled="disabled">X</button>
 					</form>
 
 					<h3>{{ $m->name }}</h3>

@@ -22,8 +22,8 @@ class MemberValidation
 			$errors[] = "Name field must be present";
 		elseif (empty($this->input['email']))
 			$errors[] = "Email field must be present";
-		elseif (empty($this->input['school']))
-			$errors[] = "School not selected";
+		elseif (count($this->input['schools']) == 0)
+			$errors[] = "Schools not selected";
 
 		if (!preg_match("/^[a-zA-Z ]*$/", $this->input['name']))
       		$errors[] = "Only letters and white space allowed for name";
@@ -48,6 +48,9 @@ class MemberValidation
 	private function cleanInputs($input)
 	{
 		return array_map(function($i){
+			if (is_array($i))
+				return $i;
+			
 			return htmlspecialchars(trim($i));
 		}, $input);
 	}

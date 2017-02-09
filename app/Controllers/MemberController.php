@@ -36,7 +36,7 @@ class MemberController extends Controller
 	}
 
 	/**
-	 * Add a new member with one school
+	 * Add a new member with selected schools
 	 * @param  Slim\Http\Request   $request
 	 * @param  Slim\Http\Response $response
 	 * @param  array   $args
@@ -54,20 +54,32 @@ class MemberController extends Controller
 		}
 
 		$input = $validator->getInput();
-		
-		$member = Member::create([
+
+		$id = Member::create([
 			'name' => $input['name'],
 			'email' => $input['email']
-		]);
+		])->id;
 
-		Enrolment::create([
-			'member_id' => $member->id,
-			"school_id" => $input['school']
-		]);
+		foreach ($input['schools'] as $sId) {
+			Enrolment::create([
+				'member_id' => $id,
+				"school_id" => $sId
+			]);
+		}
 
 		return $response->withRedirect('/members', 200);
 	}
 
+	/**
+	 * Delete member from storage
+	 * NOTE: bug with sqlite foreign keys. When deleted here its not cascading
+	 * to enrolment table. By default sqlite disables foreign key constriants.
+	 * Disabled deleting button for now
+	 * @param  Request  $request
+	 * @param  Response $response
+	 * @param  array   $args
+	 * @return Slim\Http\Response
+	 */
 	public function delete(Request $request, Response $response, $args)
 	{
 		$id = $request->getParam('id');
