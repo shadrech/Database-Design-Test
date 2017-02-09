@@ -1,0 +1,5 @@
+database/database.sqlite
+public/assets
+vendor/
+cache/*
+node_modules/

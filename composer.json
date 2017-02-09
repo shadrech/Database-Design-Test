@@ -1,0 +1,14 @@
+{
+    "name": "shadrech/code-test",
+    "description": "A database stores information about its members. Each member can be associated with 1 or more school. You should build a demo that allows someone to add a new member with the fields 'Name', 'Email Address' and 'School' (selected from a list). The demo should display all members for a selected school",
+    "require": {
+        "illuminate/database": "^5.4",
+        "slim/slim": "^3.7",
+        "rubellum/slim-blade-view": "^0.1.1"
+    },
+    "autoload": {
+    	"psr-4": {
+    		"App\\": "app"
+    	}
+    }
+}
