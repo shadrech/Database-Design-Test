@@ -1,5 +1,4 @@
 database/database.sqlite
 public/assets/app.js
 vendor/
-cache/*
 node_modules/

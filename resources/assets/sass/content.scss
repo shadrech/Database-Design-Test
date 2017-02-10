@@ -43,12 +43,19 @@
 			select {
 			    margin-left: 50%;
 			    transform: translateX(-50%);
-			    margin-bottom: 20px;
+		        width: 90%;
+    			padding: 10px;
 			}
 			button {
 			    margin-left: 50%;
 			    transform: translateX(-50%);
 			    font-size: 1.5em;
+			}
+			.instructions {
+				text-align: left;
+			    margin-top: 0;
+			    margin-bottom: 0;
+		        padding-left: 5%;
 			}
 			button.delete {
 				display: inline;
