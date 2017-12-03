@@ -1,4 +1,4 @@
-#Program & Database Design Challenge
+# Program & Database Design Challenge
 
 This is coding test assigned after a job application. Brief was:
 >A database stores information about its members. Each member can be associated with 1 or more school.
